@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+html,
+body {
+	height: 100%;
+	min-height: 100%;
+	padding-bottom: 100px;
+	margin-bottom: -100px;
+}
+
+
+div.update {
+	height: 100%
+}
+
+div.button {
+	width: 900px;
+	text-align: center;
+	padding: 30px;
+	margin: auto;
+}
+
+table {
+	height: 300px;
+	width: 900px;
+	border-top: 3px solid black;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+td {
+	border-bottom: 1px dotted black;
+}
+
+caption {
+	text-align: left;
+}
+
+.col1 {
+	background-color: #e8e8e8;
+	padding: 10px;
+	text-align: right;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+.col2 {
+	text-align: left;
+	padding: 5px;
+}
+
+.but1 {
+	height: 50px;
+	width: 200px;
+	background-color: white;
+	border: 2px solid black;
+}
+
+.but2 {
+	height: 50px;
+	width: 200px;
+	background-color: white;
+	border: 2px solid black;
+}
+
+.but1:hover {
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+
+.but2:hover {
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+
+
+#email {
+	width: 200px;
+}
+
+#addr1 {
+	width: 250px;
+	margin-right: 5px;
+}
+
+#addr2 {
+	width: 250px;
+	margin-top: 3px;
+
+}
+
+#addr_but {
+	color: white;
+	background-color: black;
+	border-color: black;
+}
+
+#addr_but:hover {
+	background-color: #b9b9b9;
+	color: black;
+	border: 2px solid black;
+}
