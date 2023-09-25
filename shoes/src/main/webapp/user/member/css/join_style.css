@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+html, body {
+	height: 100%;
+	min-height: 100%;
+	padding-bottom: 100px;
+	margin-bottom: -100px;
+}
+
+.container {
+	display: block;
+	max-width: 800px;
+	width: 100%;
+	margin: 120px auto;
+	margin-bottom: -500px;
+}
+
+.container>h1 {
+	text-align: center;
+}
+
+caption {
+	text-align: left;
+	font-size: 0.8em;
+	margin: 10px;
+}
+
+div.insert {
+	height: 100%
+}
+
+table {
+	height: 500px;
+	width: 800px;
+	border-top: 3px solid black;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+td {
+	border-bottom: 1px dotted black;
+}
+
+.col1 {
+	background-color: #e8e8e8;
+	padding: 10px;
+	text-align: right;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+.col2 {
+	text-align: left;
+	padding: 5px;
+}
+
+.id_but {
+	color: white;
+	background-color: black;
+	border-color: black;
+	width: 70px;
+	height: 22px;
+}
+
+.id_but:hover {
+	background-color: #b9b9b9;
+	color: black;
+	border: 2px solid black;
+}
+
+.num {
+	font-size: 0.8em;
+	color: red;
+}
+
+.addr1 {
+	width: 300px;
+	margin-right: 5px;
+}
+
+.addr2 {
+	width: 300px;
+	margin-top: 3px;
+}
+
+#addr_but {
+	color: white;
+	background-color: black;
+	border-color: black;
+	width: 70px;
+	height: 22px;
+}
+
+#addr_but:hover {
+	background-color: #b9b9b9;
+	color: black;
+	border: 2px solid black;
+}
+
+div.create {
+	width: 800px;
+	text-align: center;
+	padding-top: 30px;
+	margin: auto;
+}
+
+.join_but {
+	height: 50px;
+	width: 180px;
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+	margin-right: 5px;
+}
+
+.join_but:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+}
+
+.home_but {
+	height: 50px;
+	width: 180px;
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+	margin-left: 5px;
+}
+
+.home_but:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+}

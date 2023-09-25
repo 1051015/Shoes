@@ -1,0 +1,574 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.contents-width {
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 60px;
+	margin-bottom: -600px;
+}
+
+.product-detail-box {
+	margin-bottom: 40px;
+	height: 960px;
+}
+
+.product-detail-box .detail-box-left {
+	float: left;
+	width: 580px;
+}
+
+.detail-box-left .detail-thumbs-wrap {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 580px;
+}
+
+.detail-box-left .detail-images {
+	position: relative;
+	width: 540px;
+	height: 100px;
+	margin: 10px auto 0;
+}
+
+/* .swiper-container {
+	width: 540px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1;
+}
+
+.swiper-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: flex;
+	box-sizing: content-box;
+	list-style: none;
+	float: left;
+	padding-left: 0;
+}
+
+.detail-images .swiper-slide {
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin-right: 10px;
+	cursor: pointer;
+} */
+
+.detail-box-left .detail-add-box {
+	display: flex;
+	height: 158px;
+	margin-top: 37px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #e5e5e5;
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.detail-add-box .rating-box {
+	width: 269px;
+	text-align: center;
+}
+
+.detail-add-box .appraisal-box {
+	position: relative;
+	width: calc(100% - 269px);
+	font-size: 13px;
+	letter-spacing: -.65px;
+	color: #000;
+}
+
+.detail-add-box .appraisal-box ul {
+	padding: 15px 0;
+	margin-left: 67px;
+	list-style: none;
+}
+
+.appraisal-box ul li {
+	padding: 6px 0;
+	font-weight: bold;
+}
+
+.appraisal-box ul li .label {
+	display: inline-block;
+	width: 108px;
+	color: #666;
+	font-weight: 400;
+}
+
+.product-detail-box .detail-box-right {
+	float: right;
+	width: 580px;
+}
+
+.detail-brand-box .icon-brand.wings {
+	background: black;
+	color: #fff;
+	border: none;
+	font-family: "Montserrat", "Noto Sans KR", sans-serif;
+	font-weight: 600;
+}
+
+.detail-brand-box .btn-brand {
+	position: relative;
+	display: inline-block;
+	margin-top: 6px;
+	padding-right: 13px;
+	font-size: 16px;
+	color: #000;
+	font-weight: 700;
+	font-family: "Montserrat", sans-serif;
+}
+
+.detail-box-header .prod-name {
+	margin-top: 15px;
+	font-size: 32px;
+	letter-spacing: -.8px;
+	color: #000;
+	font-weight: 700;
+	line-height: 39px;
+	font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+
+.detail-box-header .prod-code-list {
+	overflow: hidden;
+	margin-top: 16px;
+	list-style: none;
+	padding-left: 0;
+}
+
+.detail-box-header .prod-code-list li {
+	position: relative;
+	float: left;
+	font-size: 13px;
+	color: #999;
+}
+
+.detail-box-header .detail-price {
+	margin: 20px 0 24px;
+	height: 32px;
+}
+
+.detail-price .prod-price {
+	position: relative;
+	float: left;
+	font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+
+.detail-price .prod-price .price-cost {
+	font-size: 26px;
+	line-height: 32px;
+	font-weight: 600;
+}
+
+.detail-price .prod-price .price-unit {
+	font-family: "Noto Sans KR", sans-serif;
+	font-size: 15px;
+}
+
+.tbl-form-wrap.form-view {
+	padding: 23px 0;
+}
+
+.border-line-box {
+	border-top: 2px solid #000;
+	border-bottom: 1px solid #b5b5b5;
+}
+
+.tbl-form table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+}
+
+colgroup {
+	display: table-column-group;
+}
+
+col {
+	display: table-column;
+}
+
+.tbl-form-wrap.form-view .tbl-form tbody tr th {
+	font-size: 14px;
+	padding: 0 0 0 15px;
+}
+
+.tbl-form-wrap .tbl-form tr th {
+	color: #333;
+	font-weight: bold;
+	padding: 11px 0;
+	vertical-align: top;
+}
+
+.tbl-form-wrap .tbl-form tr th {
+	height: 50px;
+	text-align: left;
+	font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+
+.tbl-form-wrap .tbl-form tr td {
+	height: 50px;
+	text-align: left;
+	font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+
+.tbl-form-wrap.form-view .tbl-form tbody tr td {
+	padding-bottom: 20px;
+	font-size: 14px;
+	letter-spacing: -.7px;
+	vertical-align: top;
+}
+
+.tbl-form-wrap.form-view .tbl-form tr td:last-child {
+	padding-right: 20px;
+}
+
+.tbl-form-wrap.form-view .tbl-form tbody tr td {
+	color: #000;
+	font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+
+.tbl-form-wrap.form-view .tbl-form tbody tr.first th {
+	padding: 20px 0 0 15px;
+}
+
+.tbl-form-wrap.form-view .tbl-form tbody tr.first td {
+	padding-top: 20px;
+}
+
+.tbl-form tbody tr td .link_arrow {
+	position: relative;
+	display: inline-block;
+	padding-right: 9px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.tbl-form tbody tr td .spot {
+	font-weight: bold;
+	color: #ee1c25;
+}
+
+.tbl-form tbody tr th .text-size-guide {
+	display: inline-block;
+	line-height: 21px;
+}
+
+.tbl-form-wrap.form-view .tbl-form tr td:not(:last-child) {
+	padding-right: 20px;
+}
+
+.tbl-form-wrap .tbl-form tbody tr td:not(:last-child) {
+	padding-right: 99px;
+}
+
+.tbl-form tbody tr td .size-list {
+	overflow: hidden;
+	min-height: 58px;
+	margin-bottom: 10px;
+	margin-top: -5px;
+	list-style: none;
+	padding: 0;
+}
+
+.tbl-form tbody tr td .size-list>li {
+	float: left;
+	margin: 5px 3px 0 0;
+}
+
+.btn-prod-size {
+	display: inline-block;
+	color: #666;
+	min-width: 50px;
+	height: 24px;
+	padding: 0 5px;
+	background-color: #fff;
+	border: 1px solid #d5d5d5;
+	text-align: center;
+	font-family: "Montserrat", sans-serif;
+	line-height: 22px;
+	transition: color .23s ease-out, border-color .23s ease-out;
+	font-size: 13px;
+	letter-spacing: -.325px;
+}
+
+.detail-box-right .total-sum-time {
+	margin-top: 25px;
+	padding: 0 11px 0 16px;
+}
+
+.flex-box {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	display: -webkit-flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+
+.total-sum-time .text {
+	padding-top: 14px;
+	font-size: 14px;
+	letter-spacing: -.35px;
+	color: #333;
+	font-weight: bold;
+}
+
+.total-sum-time .sum-value {
+	font-size: 36px;
+	color: #ee1c25;
+	font-weight: 600;
+	font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+
+.total-sum-time .sum-value .unit {
+	padding-left: 4px;
+	font-weight: bold;
+	vertical-align: middle;
+	margin-top: 2px;
+	font-size: 14px;
+	letter-spacing: -.35px;
+	color: #000;
+}
+
+.total-sum-time+.btn-wrap {
+	margin-top: 35px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	display: -webkit-flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+
+.btn-wrap {
+	text-align: center;
+}
+
+.total-sum-time+.btn-wrap .btn.btn-lg {
+	flex: 1;
+	min-width: 195px;
+}
+
+.btn.btn-lg {
+	min-width: 200px;
+	height: 60px;
+	line-height: 58px;
+	font-size: 16px;
+	letter-spacing: -.8px;
+	cursor: pointer;
+}
+
+.btn1 {
+	background-color: #666;
+	border: 1px solid #666;
+}
+
+.btn2 {
+	background-color: #111;
+	border: 1px solid #111;
+}
+
+.btn {
+	position: relative;
+	display: inline-block;
+	color: #fff;
+	min-width: 140px;
+	height: 44px;
+	padding: 0 25px;
+	text-align: center;
+	font-weight: bold;
+	line-height: 42px;
+	transition: background-color .23s ease-out, border-color .23s ease-out;
+	font-size: 14px;
+	letter-spacing: -.7px;
+}
+
+.btn+.btn {
+	margin-left: 10px;
+}
+
+.product-detail-contents .product-detail-info .tab-wrap {
+	width: 1200px;
+	padding-top: 60px;
+}
+
+.tab-wrap {
+	padding: 0;
+}
+
+.product-detail-info>.tab-wrap:first-child>.tabs {
+	margin-bottom: 0;
+}
+
+.tab {
+	border-bottom: 2px solid black;
+	width: 100%;
+	font-family: "Montserrat", "Noto Sans KR", sans-serif;
+	color: #000;
+	font-weight: bold;
+	line-height: 30px;
+	font-size: 18px;
+	letter-spacing: -.9px;
+}
+
+.tab-wrap:not(.multi-line) .tab-content {
+	width: 100%;
+}
+
+.product-detail-info .editor-wrap {
+	margin: 40px 0;
+}
+
+.border-line-box-header {
+	position: relative;
+	display: block;
+}
+
+.border-line-box-header .text-head3 {
+	margin-top: 60px;
+	font-family: "Montserrat", "Noto Sans KR", sans-serif;
+	color: #000;
+	font-weight: bold;
+	line-height: 30px;
+	font-size: 18px;
+	letter-spacing: -.9px;
+}
+
+.tab-content>.border-line-box.tbl-form-wrap {
+	margin-top: 0;
+}
+
+.border-line-box.form-view.product-view {
+	margin-top: 13px;
+	padding: 0;
+}
+
+.product-view.tbl-form-wrap table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+}
+
+.border-line-box.form-view.product-view tbody tr {
+	border-bottom: 1px solid #ccc;
+}
+
+.border-line-box.form-view.product-view tbody tr th {
+	color: #666;
+	vertical-align: middle;
+	height: auto;
+	font-size: 13px;
+	letter-spacing: -.65px;
+	padding: 17px 0 17px 20px;
+	font-weight: bold;
+	text-align: left;
+	font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+
+.border-line-box.form-view.product-view tbody tr td {
+	padding: 19px 0 18px;
+	line-height: 23px;
+	height: auto;
+	font-size: 13px;
+	letter-spacing: -.65px;
+	color: #000;
+	font-family: "Montserrat", "Noto Sans KR", sans-serif;
+	text-align: left;
+}
+
+.tbl-text-right {
+	margin-top: 14px;
+	text-align: right;
+	margin-bottom: 80px;
+}
+
+.text-head4 {
+	border-bottom: 2px solid black;
+	width: 100%;
+	font-family: "Montserrat", "Noto Sans KR", sans-serif;
+	color: #000;
+	font-weight: bold;
+	line-height: 30px;
+	font-size: 18px;
+	letter-spacing: -.9px;
+}
+
+.product-review {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.note {
+	list-style: none;
+	padding: 0;
+}
+
+.note li {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+
+.writer {
+	float: right;
+	margin-top: 10px;
+}
+
+.rank {
+	margin-top: 10px;
+}
+
+.paging {
+	width: 100%;
+	padding: 30px 0;
+	text-align: center;
+}
+
+.paging>span>a {
+	color: #777;
+	font-size: 11px;
+	letter-spacing: -1px;
+}
+
+.paging>.num>a {
+	display: inline-block;
+	min-width: 14px;
+	margin: 0 2px;
+	padding: 8px 9px;
+	border: 1px solid #c4c4c4;
+	color: #000;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.paging>.num>a.on {
+	color: #fe434c;
+	font-weight: bold;
+}

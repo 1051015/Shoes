@@ -1,0 +1,608 @@
+@charset "UTF-8";
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+	position: relative;
+	margin: 0 auto;
+	width: 80%;
+	height: 100px;
+	display: block;
+}
+
+.header img {
+	float: left;
+	padding-top: 7px;
+}
+
+.header .title {
+	float: left;
+	position: absolute;
+	width: 150px;
+	height: 90px;
+	float: left;
+	display: block;
+	margin-left: 75px;
+	margin-top: 24px;
+}
+
+.header .title a {
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: black;
+	text-decoration: none;
+	font-style: italic;
+}
+
+.header .search {
+	position: absolute;
+	display: block;
+	width: 450px;
+	height: 35px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 30px;
+	left: 30%;
+}
+
+.header .search>input {
+	width: 100%;
+	height: 100%;
+	border: 2px solid black;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+
+.header .search ul {
+	position: absolute;
+	float: right;
+	list-style: none;
+	top: 20px;
+	right: 0;
+}
+
+.header .search li {
+	float: left;
+	padding: 5.5px;
+}
+
+.header .rightTool {
+	position: absolute;
+	height: 50px;
+	width: 320px;
+	top: 10px;
+	right: 0px;
+}
+
+.header .rightTool ul {
+	list-style: none;
+	float: right;
+}
+
+.header .rightTool ul li {
+	float: left;
+	padding: 8px;
+}
+
+.menubar {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 55px;
+	background-color: black;
+}
+
+.menubar .totalmenu {
+	position: relative;
+	display: block;
+	width: 85%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.menubar .totalmenu .main {
+	position: absolute;
+	width: 500px;
+	float: left;
+	left: 0px;
+	top: 14px;
+}
+
+.menubar .totalmenu .main ul {
+	list-style: none;
+}
+
+.menubar .totalmenu .main ul li a {
+	text-decoration: none;
+	color: white;
+	float: left;
+	padding: 0 13px;
+	font-size: 1.1em;
+}
+
+.menubar .totalmenu .main ul li a:hover {
+	color: red;
+}
+
+.menubar .totalmenu .sub {
+	position: absolute;
+	width: 500px;
+	right: 0px;
+	top: 14px;
+}
+
+.menubar .totalmenu .sub ul {
+	list-style: none;
+	right: 0;
+}
+
+.menubar .totalmenu .sub ul li a {
+	text-decoration: none;
+	color: white;
+	float: right;
+	padding: 0 13px;
+	font-size: 1.1em;
+}
+
+.menubar .totalmenu .sub ul li a:hover {
+	color: red;
+}
+
+.ad {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	background-color: gray;
+	overflow: hidden;
+}
+
+.bestitems {
+	position: relative;
+	top: 80px;
+	width: 95%;
+	height: 700px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.bestitems>h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.3em;
+}
+
+.bestitems .box {
+	position: relative;
+	margin-top: 20px;
+	width: 100%;
+	height: 320px;
+}
+
+.bestitems .box2 {
+	position: relative;
+	width: 100%;
+	height: 300px;
+}
+
+.bestitems .box .best1, .box2 .best1 {
+	width: 220px;
+	height: 300px;
+	background-color: lightgray;
+	margin-left: 19px;
+	float: left;
+}
+
+.bestitems .box .best2, .best3, .best4, .best5, .best6 {
+	position: relative;
+	width: 220px;
+	height: 300px;
+	background-color: lightgray;
+	float: left;
+	margin-left: 16px;
+}
+
+.bestitems .box2 .best2, .best3, .best4, .best5, .best6 {
+	position: relative;
+	width: 220px;
+	height: 300px;
+	background-color: lightgray;
+	float: left;
+	margin-left: 16px;
+}
+
+.bestitems .box .best1 .imgbox, .box .best2 .imgbox, .box .best3 .imgbox,
+	.box .best4 .imgbox, .box .best5 .imgbox, .box .best6 .imgbox {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background-color: black;
+}
+
+.bestitems .box2 .best1 .imgbox, .box2 .best2 .imgbox, .box2 .best3 .imgbox,
+	.box2 .best4 .imgbox, .box2 .best5 .imgbox, .box2 .best6 .imgbox {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background-color: black;
+}
+
+.bestitems .box .best1 .imgbox {
+	background-image: url("/mainpage/bestitemsimages/nike1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.mdpick {
+	position: relative;
+	top: 180px;
+	width: 90%;
+	height: 480px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.mdpick>h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.3em;
+}
+
+.mdpick .box {
+	position: relative;
+	margin-top: 20px;
+	width: 100%;
+	height: 320px;
+}
+
+.mdpick .box .md1 {
+	width: 320px;
+	height: 320px;
+	background-color: lightgray;
+	margin-left: 17px;
+	float: left;
+}
+
+.mdpick .box .md2, .md3, .md4 {
+	width: 320px;
+	height: 320px;
+	background-color: lightgray;
+	float: left;
+	margin-left: 15px;
+}
+
+.mdpick .nar {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	top: 10px;
+}
+
+.mdpick .nar .md1nar {
+	width: 250px;
+	height: 200px;
+	float: left;
+	margin-left: 19px;
+}
+
+.mdpick .nar .md2nar, .md3nar, .md4nar {
+	width: 250px;
+	height: 200px;
+	float: left;
+	margin-left: 85px;
+}
+
+.mdpick .nar span {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+.mdpick .nar a {
+	font-size: 1.05em;
+}
+
+.newitems {
+	position: relative;
+	top: 280px;
+	width: 95%;
+	height: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.newitems>h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.3em;
+}
+
+.newitems .box {
+	position: relative;
+	margin-top: 20px;
+	width: 100%;
+	height: 400px;
+}
+
+.newitems .box .new1 {
+	width: 215px;
+	height: 320px;
+	background-color: lightgrey;
+	margin-left: 19px;
+	float: left;
+}
+
+.newitems .box .new2, .new3, .new4, .new5, .new6 {
+	position: relative;
+	width: 215px;
+	height: 320px;
+	background-color: lightgrey;
+	float: left;
+	margin-left: 22px;
+}
+
+.topbrand {
+	position: relative;
+	width: 90%;
+	top: 380px;
+	height: 950px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.topbrand>h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.3em;
+}
+
+.topbrand .box {
+	position: relative;
+	margin-top: 20px;
+	width: 100%;
+	height: 420px;
+}
+
+.topbrand .box2 {
+	position: relative;
+	width: 100%;
+	height: 420px;
+	top: 30px;
+}
+
+.topbrand .box .brand1, .box2 .brand1 {
+	width: 420px;
+	height: 420px;
+	float: left;
+	background-color: lightgrey;
+	margin-left: 18px;
+}
+
+.topbrand .box .brand2, .brand3, .box2 .brand2, .brand3 {
+	width: 420px;
+	height: 420px;
+	float: left;
+	background-color: lightgrey;
+	margin-left: 32px;
+}
+
+.topbrand .box .brand1 {
+	background-image: url("images/product/nike2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.topbrand .box .brand2 {
+	background-image: url("images/product/addidas.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.topbrand .box .brand3 {
+	background-image: url("images/product/asics.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.topbrand .box2 .brand1 {
+	background-image: url("images/product/macmoc.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.topbrand .box2 .brand2 {
+	background-image: url("images/product/cloudzero.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.topbrand .box2 .brand3 {
+	background-image: url("images/product/p-31.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.hotsale {
+	position: relative;
+	width: 95%;
+	height: 400px;
+	top: 480px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.hotsale>h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.3em;
+}
+
+.hotsale .box {
+	position: relative;
+	margin-top: 20px;
+	width: 100%;
+	height: 300px;
+}
+
+.hotsale .box .sale1 {
+	width: 215px;
+	height: 314px;
+	background-color: lightgrey;
+	margin-left: 19px;
+	float: left;
+}
+
+.hotsale .box .sale2, .sale3, .sale4, .sale5, .sale6 {
+	position: relative;
+	width: 215px;
+	height: 314px;
+	background-color: lightgrey;
+	float: left;
+	margin-left: 22px;
+}
+
+.ranking {
+	position: relative;
+	width: 90%;
+	height: 740px;
+	top: 580px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.ranking>h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.3em;
+}
+
+.ranking .box {
+	position: relative;
+	margin-top: 20px;
+	width: 100%;
+	height: 300px;
+}
+
+.ranking .box2 {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	top: 20px;
+}
+
+.ranking .box .rank1, .box2 .rank1 {
+	width: 250px;
+	height: 320px;
+	float: left;
+	background-color: lightgrey;
+	margin-left: 17px;
+}
+
+.ranking .box .rank2, .rank3, .rank4, .rank5, .box2 .rank2, .rank3,
+	.rank4, .rank5 {
+	width: 250px;
+	height: 320px;
+	float: left;
+	background-color: lightgrey;
+	margin-left: 19px;
+}
+
+.foot {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	top: 700px;
+	background-color: black;
+	overflow: hidden;
+}
+
+.foot>h1 {
+	font-weight: bold;
+	color: white;
+	margin-left: 15px;
+	margin-top: 30px;
+}
+
+.foot .footbox {
+	position: relative;
+	height: 160px;
+	width: 870px;
+	margin-left: 15px;
+	margin-top: 20px;
+}
+
+.foot .footbox a {
+	color: darkgray;
+	font-size: 0.8em;
+}
+
+.foot .footbox p {
+	color: gray;
+	font-size: 0.75em;
+}
+
+.foot .footbox2 {
+	position: absolute;
+	width: 600px;
+	height: 160px;
+	left: 1000px;
+	top: 90px;
+}
+
+.foot .footbox2 ul {
+	float: left;
+	text-decoration: none;
+}
+
+.foot .footbox2 ul li {
+	float: left;
+	list-style: none;
+	text-decoration-line: none;
+}
+
+.foot .footbox2 ul .f1, .f4, .f7, .f10 {
+	margin-left: 0;
+}
+
+.foot .footbox2 ul .f2, .f3 {
+	margin-left: 100px;
+}
+
+.foot .footbox2 ul .f5 {
+	margin-left: 105px;
+}
+
+.foot .footbox2 ul .f6 {
+	margin-left: 121px;
+}
+
+.foot .footbox2 ul .f8 {
+	margin-left: 106px;
+}
+
+.foot .footbox2 ul .f9 {
+	margin-left: 147px;
+}
+
+.foot .footbox2 ul .f11 {
+	margin-left: 53px;
+}
+
+.foot .footbox2 ul .f12 {
+	margin-left: 80px;
+}
+
+.foot .footbox2 a {
+	text-decoration: none;
+	font-size: 0.8em;
+	color: darkgray;
+}
+
+.foot .footbox2 ul .f1, .f2, .f3 {
+	font-weight: bold;
+	color: white;
+}
