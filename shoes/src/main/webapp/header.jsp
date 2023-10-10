@@ -10,6 +10,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WINGS</title>
 <link rel="stylesheet" href="user/css/hf_style.css">
+<script>
+	function message(value) {
+		alert("로그인 후 이용가능한 페이지입니다.");
+		if (value == 0) {
+			location.href = "ShoesServlet?command=cart_list";
+		} else if (value == 1) {
+			location.href = "ShoesServlet?command=mypage";
+		} else if (value == 2) {
+			location.href = "ShoesServlet?command=qna_list";
+		}
+	}
+</script>
 </head>
 <body>
 	<div class="header">
@@ -25,7 +37,6 @@
 			<input type="text" name="info" placeholder="신상품 ~50% SALE"
 				onfocus="this.value=''">
 			<ul>
-				<li><a href="#"><img src="images/filter.png"></a></li>
 				<li><a href="#"><img src="images/search.jpg"></a></li>
 			</ul>
 		</div>
@@ -38,18 +49,18 @@
 								src="images/login.png"></a></li>
 						<li><a href="ShoesServlet?command=join_form"><img
 								src="images/join.png"></a></li>
-						<li><a href="ShoesServlet?command=cart_form"><img
+						<li><a href="#" onclick="message(0)"><img
 								src="images/cart.png"></a></li>
-						<li><a href="ShoesServlet?command=mypage"><img
+						<li><a href="#" onclick="message(1)"><img
 								src="images/mypage.png"></a></li>
 					</c:when>
 					<c:otherwise>
 						<li class="user_login">
 							${sessionScope.loginUser.name}(${sessionScope.loginUser.id})님</li>
-						<li style="margin-top: 10px;"><a
+						<li style="margin-top:1px;"><a
 							href="ShoesServlet?command=logout"><img
 								src="images/logout.png"></a></li>
-						<li><a href="ShoesServlet?command=cart_form"><img
+						<li><a href="ShoesServlet?command=cart_list"><img
 								src="images/cart.png"></a></li>
 						<li><a href="ShoesServlet?command=mypage"><img
 								src="images/mypage.png"></a></li>
@@ -64,20 +75,18 @@
 			<div class="main">
 				<ul>
 					<li><a href="ShoesServlet?command=brand_form">BRAND</a></li>
-					<li><a href="men.jsp">MEN</a></li>
-					<li><a href="women.jsp">WOMEN</a></li>
-					<li><a href="kids.jsp">KIDS</a></li>
-					<li><a href="sale.jsp">SALE</a></li>
-					<li><a href="new.jsp">NEW</a></li>
+					<li><a href="ShoesServlet?command=men_form">MEN</a></li>
+					<li><a href="ShoesServlet?command=women_form">WOMEN</a></li>
+					<li><a href="ShoesServlet?command=kids_form">KIDS</a></li>
 				</ul>
 			</div>
 
 			<div class="sub">
 				<ul>
-					<li><a href="#">이벤트/쿠폰</a></li>
-					<li><a href="#">MODELS</a></li>
-					<li><a href="#">ONLY WINGS</a></li>
-					<li><a href="#">RANK</a></li>
+					<li><a href="#" onclick="message(2)">Q/A</a></li>
+					<li><a href="ShoesServlet?command=models_form">MODELS</a></li>
+					<li><a href="ShoesServlet?command=onlywings_form">ONLY
+							WINGS</a></li>
 				</ul>
 			</div>
 		</div>

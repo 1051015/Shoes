@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.title {
+	text-align: center;
+	margin: 50px;
+}
+
+.go_search {
+	margin-left: 5%;
+	width: 90%;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.search_but {
+	width: 50px;
+	height: 23px;
+}
+
+table#memberList {
+	border-collapse: collapse; /* border 사이의 간격 없앰 */
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+	width: 90%;
+	margin: 0 auto;
+}
+
+table#memberList th {
+	background-color: #E4E4E4;
+}
+
+table#memberList th, td {
+	padding: 8px 5px;
+	text-align: center;
+}
+
+table#memberList td {
+	border-bottom: 1px dotted black;
+}

@@ -6,56 +6,20 @@
 <meta charset="UTF-8">
 <title>상품 상세 정보 페이지</title>
 <link href="user/product/css/productDetail_style.css" rel="stylesheet">
+<script type="text/javascript" src="user/script/product.js"></script>
 </head>
 <body>
 	<%@ include file="/header.jsp"%>
 	<div class="contents-width">
-		<form method="post" action="ShoesServlet?command=product_detail">
+		<form method="post" action="ShoesServlet?command=product_detail"
+			name="frm" onload="init();">
 			<div class="product-detail-box">
 				<!-- 사진영역 -->
 				<div class="detail-box-left">
 					<div class="detail-thumbs-wrap">
-						<img id="big" src="images/product/nike01_men_info.PNG"
+						<img src="product_images/${productVO.infoimg}"
 							style="width: 580px; height: 580px;">
 					</div>
-					<!-- <div class="detail-images">
-						<div class="swiper-container">
-							<ul class="swiper-wrapper">
-								<li class="swiper-slide"><img class="small"
-									src="images/아디다스/아디다스01_01.PNG"
-									style="width: 100px; height: 100px;"></li>
-								<li class="swiper-slide"><img class="small"
-									src="images/아디다스/아디다스01_02.PNG"
-									style="width: 100px; height: 100px;"></li>
-								<li class="swiper-slide"><img class="small"
-									src="images/아디다스/아디다스01_03.PNG"
-									style="width: 100px; height: 100px;"></li>
-								<li class="swiper-slide"><img class="small"
-									src="images/아디다스/아디다스01_04.PNG"
-									style="width: 100px; height: 100px;"></li>
-								<li class="swiper-slide"><img class="small"
-									src="images/아디다스/아디다스01_05.PNG"
-									style="width: 100px; height: 100px;"></li>
-							</ul>
-						</div>
-					</div> -->
-
-					<!-- <script type="text/javascript">
-						var bigPic = document.querySelector("#big"); // 큰 사진
-						var smallPics = document.querySelectorAll(".small"); // 작은 사진(여러개)
-
-						for (var i = 0; i < smallPics.length; i++) {
-							smallPics[i].addEventListener("click", changepic); // 이벤트 처리
-							/* 
-							onclick으로 하면 하나의 요소에 하나의 이벤트만 사용가능
-							smallPics[i].onclick = changepic;
-							 */
-						}
-						function changepic() { // 사진 바꾸는 함수
-							var smallPicAttribute = this.getAttribute("src");
-							bigPic.setAttribute("src", smallPicAttribute);
-						}
-					</script> -->
 
 					<!-- 추가설명영역 -->
 					<div class="detail-add-box">
@@ -78,15 +42,44 @@
 					<div class="detail-box-header">
 						<div class="detail-brand-box">
 							<span class="icon-brand wings">WINGS</span> <span
-								class="btn-brand">브랜드명</span>
+								class="btn-brand">${productVO.brand}</span>
+							<c:choose>
+								<c:when test="${empty sessionScope.loginUser}">
+									<span class="heart-img">
+										<button type="button" onclick="changeImg(0)"
+											class="heart-off-btn">
+											<img src="images/heart-off.png" class="heart-off" id="heart">
+										</button>
+									</span>
+								</c:when>
+								<c:otherwise>
+									<c:if test="${productVO.heart == '1'}">
+										<span class="heart-img">
+											<button type="button" onclick="changeImg(1)"
+												class="heart-off-btn">
+												<img src="images/heart-off.png" class="heart-off" id="heart">
+											</button>
+										</span>
+									</c:if>
+									<c:if test="${productVO.heart == '2'}">
+										<span class="heart-img">
+											<button type="button" onclick="changeImg(1)"
+												class="heart-on-btn">
+												<img src="images/heart-on.png" class="heart-on" id="heart">
+											</button>
+										</span>
+									</c:if>
+								</c:otherwise>
+							</c:choose>
 						</div>
-						<div class="prod-name">상품명</div>
+						<div class="prod-name">${productVO.pname}</div>
 						<ul class="prod-code-list">
-							<li>상품코드 : 1010094724</li>
+							<li>상품코드 : ${productVO.shoescode}</li>
 						</ul>
 						<div class="detail-price">
-							<span class="prod-price"><span class="price-cost">79,000</span>
-								<span class="price-unit">원</span> </span>
+							<span class="prod-price"><span class="price-cost"><fmt:formatNumber
+										value="${productVO.price}" pattern="###,###" /></span> <span
+								class="price-unit">원</span> </span>
 						</div>
 					</div>
 
@@ -100,84 +93,76 @@
 							<tbody>
 								<tr class="first">
 									<th>통합멤버십 혜택</th>
-									<td>
-										<!-- <span class="text point-type" style="display: none;"></span> -->
-										<a href="ShoesServlet?command=join_form" class="link_arrow">
-											★ 회원 가입 시 <span class="spot">5,000P</span> 즉시 적립 ★
-									</a>
-									</td>
+									<td><a href="ShoesServlet?command=join_form"
+										class="link_arrow"> ★ 회원 가입 시 <span class="spot">5,000P</span>
+											즉시 적립 ★
+									</a></td>
 								</tr>
 
 								<tr>
 									<th>색상</th>
-									<td><span class="text">색상</span></td>
+									<td><span class="text">${productVO.color}</span></td>
 								</tr>
 
 								<tr>
 									<th>배송</th>
-									<td><span class="text">일반배송(무료배송)</span></td>
+									<td><span class="text">무료배송 | 대우택배</span></td>
 								</tr>
 
 								<tr>
-									<th><span class="text-size-guide" id="text-size-guide">사이즈</span></th>
-									<td class="optionButtonType">
-										<ul class="size-list">
-											<li><button type="button" class="btn-prod-size">220</button></li>
-											<li><button type="button" class="btn-prod-size">225</button></li>
-											<li><button type="button" class="btn-prod-size">230</button></li>
-											<li><button type="button" class="btn-prod-size">235</button></li>
-											<li><button type="button" class="btn-prod-size">240</button></li>
-											<li><button type="button" class="btn-prod-size">245</button></li>
-											<li><button type="button" class="btn-prod-size">250</button></li>
-											<li><button type="button" class="btn-prod-size">255</button></li>
-											<li><button type="button" class="btn-prod-size">260</button></li>
-											<li><button type="button" class="btn-prod-size">265</button></li>
-											<li><button type="button" class="btn-prod-size">270</button></li>
-											<li><button type="button" class="btn-prod-size">275</button></li>
-											<li><button type="button" class="btn-prod-size">280</button></li>
-											<li><button type="button" class="btn-prod-size">285</button></li>
-											<li><button type="button" class="btn-prod-size">290</button></li>
-											<li><button type="button" class="btn-prod-size">295</button></li>
-											<li><button type="button" class="btn-prod-size">300</button></li>
-										</ul>
-									</td>
+									<th>사이즈</th>
+									<td><select name="psize" id="psize">
+											<option value="" disabled selected>사이즈를 선택하세요.</option>
+											<option value="220">220</option>
+											<option value="225">225</option>
+											<option value="230">230</option>
+											<option value="235">235</option>
+											<option value="240">240</option>
+											<option value="245">245</option>
+											<option value="250">250</option>
+											<option value="255">255</option>
+											<option value="260">260</option>
+											<option value="265">265</option>
+											<option value="270">270</option>
+											<option value="275">275</option>
+											<option value="280">280</option>
+											<option value="285">285</option>
+											<option value="290">290</option>
+									</select></td>
+								</tr>
+
+								<tr>
+									<th>수량</th>
+									<td><div class="quan_area">
+											<input type="button" value=" - " onclick="minus()"
+												class="minus_btn"><input type="text" name="quantity"
+												value="1" size="2" class="quantity" onchange="change()"
+												readonly><input type="button" value=" + "
+												onclick="plus()" class="plus_btn">
+										</div></td>
 								</tr>
 							</tbody>
 						</table>
-					</div>
-
-					<!-- 결제금액영역 -->
-					<div class="total-sum-time">
-						<div class="flex-box">
-							<span class="text">총 결제금액</span>
-							<div class="right-box">
-								<!-- <span style="display: none;"> </span> -->
-								<span class="sum-value"><span>0</span>&nbsp;<span
-									class="unit">원</span></span>
-							</div>
-						</div>
-					</div>
-
-					<!-- 사이즈 선택 시 가격 계산 영역 -->
-					<div class="prod-option-wrap">
-						<div class="prod-option-scroll">
-							<ul>
-								<li><div class="option-amount-sum">
-										<span class="color-code-text"><span>290</span></span> <span
-											class="ui-spinner ui-corner-all ui-widget ui-widget-content">
-											<input type="number" class="input-spinner ui-spinner-input"
-											value="1" title="구매개수">
-										</span>
-									</div></li>
-							</ul>
-						</div>
+						<input type="hidden" name="shoescode"
+							value="${productVO.shoescode}">
 					</div>
 
 					<!-- 장바구니/구매버튼영역 -->
 					<div class="btn-wrap col2">
-						<button type="button" class="btn btn-lg btn1"
-							onclick="location.href='ShoesServlet?command=cart_form'">장바구니</button>
-						<button type="button" class="btn btn-lg btn2">바로구매</button>
+						<c:choose>
+							<c:when test="${empty sessionScope.loginUser}">
+								<button type="button" class="btn btn-lg btn1"
+									onclick="go_cart(0)">장바구니 담기</button>
+								<button type="button" class="btn btn-lg btn2"
+									onclick="go_order(0)">바로구매</button>
+							</c:when>
+							<c:otherwise>
+								<button type="button" class="btn btn-lg btn1"
+									onclick="go_cart(1)">장바구니 담기</button>
+								<button type="button" class="btn btn-lg btn2"
+									onclick="go_order(1)">바로구매</button>
+							</c:otherwise>
+						</c:choose>
 					</div>
 				</div>
 			</div>
@@ -188,19 +173,18 @@
 					<div class="tab">
 						<h2 style="margin-bottom: 10px">상품정보</h2>
 					</div>
+
+					<!-- 상품이미지영역 -->
 					<div class="tab-content">
-						<!-- 상품이미지영역 -->
 						<div id="product-detail-description-wrapper">
 							<div class="editor-wrap">
 								<div style="text-align: center;">
-									<img src="images/product/ex.png"
+									<img src="product_images/${productVO.detail1img}"
 										style="width: 900px; height: 600px; margin-bottom: 15px;">
-									<img src="images/product/nike01_men_detail2.PNG"
+									<img src="product_images/${productVO.detail2img}"
 										style="width: 900px; height: 600px; margin-bottom: 15px;">
-									<img src="images/product/nike01_men_detail3.PNG"
+									<img src="product_images/${productVO.detail3img}"
 										style="width: 900px; height: 600px; margin-bottom: 40px;">
-									<!-- <img src="https://via.placeholder.com/900x600"
-										style="width: 900px; height: 600px; margin-bottom: 40px;"> -->
 								</div>
 							</div>
 						</div>
@@ -226,19 +210,17 @@
 										<th>소재</th>
 										<td><span>천연가죽(소)</span></td>
 										<th>색상</th>
-										<td><span>색상</span></td>
+										<td><span>${productVO.color}</span></td>
 									</tr>
 									<tr>
 										<th>사이즈</th>
-										<td><span>220 / 225 / 230 / 235 / 240 / 245 / 250
-												/ 255 / 260 / 265 / 270 / 275 / 280 / 290 / 300</span></td>
+										<td><span>220 ~ 290</span></td>
 										<th>굽높이</th>
-										<td style="vertical-align: middle;"><span>뒷굽:
-												2.8cm</span></td>
+										<td><span>뒷굽: 2.5cm</span></td>
 									</tr>
 									<tr>
 										<th>제조사</th>
-										<td><span>ADIDAS</span></td>
+										<td><span>${productVO.brand}</span></td>
 										<th>제조국</th>
 										<td><span>인도네시아</span></td>
 									</tr>
@@ -272,7 +254,7 @@
 
 					<!-- 상품리뷰영역 -->
 					<div class="product-review">
-						<div class="text-head4">
+						<div class="text-review">
 							<h2 style="margin-bottom: 10px">상품리뷰</h2>
 						</div>
 					</div>
@@ -283,7 +265,7 @@
 									<img src="images/5star.png" class="rank"> <span
 										class="writer">qw**&nbsp;&nbsp;2023-09-20</span>
 								</div>
-								<h3>상품명/색상/사이즈</h3>
+								<h3>${productVO.pname}/${productVO.color}</h3>
 								<p>요즘 트렌드에 맞는 신발인 것 같아요. 넘 이뻐요ㅎㅎ</p>
 							</li>
 							<li>
@@ -291,7 +273,7 @@
 									<img src="images/5star.png" class="rank"> <span
 										class="writer">ho**&nbsp;&nbsp;2023-09-19</span>
 								</div>
-								<h3>상품명/색상/사이즈</h3>
+								<h3>${productVO.pname}/${productVO.color}</h3>
 								<p>색상이 너무 이뻐서 구매했는데 실물과 사진이 거의 똑같아서 매무 만족합니다!!</p>
 							</li>
 							<li>
@@ -299,7 +281,7 @@
 									<img src="images/3star.png" class="rank"> <span
 										class="writer">gu****&nbsp;&nbsp;2023-09-18</span>
 								</div>
-								<h3>상품명/색상/사이즈</h3>
+								<h3>${productVO.pname}/${productVO.color}</h3>
 								<p>상품은 나쁘지 않은데요... 배송이 생각보다 너무 느린 것 같아요ㅠㅠ</p>
 							</li>
 						</ul>

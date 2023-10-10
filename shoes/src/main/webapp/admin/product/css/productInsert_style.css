@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+.title {
+	text-align: center;
+	margin: 50px;
+}
+
+table#list {
+	border-collapse: collapse; /* border 사이의 간격 없앰 */
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+	width: 680px;
+	margin: 0 auto;
+}
+
+table#list th {
+	background-color: #E4E4E4;
+}
+
+table#list th, td {
+	padding: 8px 5px;
+}
+
+table#list tr {
+	border-bottom: 1px dotted black;
+}
+
+.buttons {
+	margin: 50px;
+	text-align: center;
+}
+
+.save_but {
+	height: 50px;
+	width: 180px;
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.save_but:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+}
+
+.mov_but {
+	height: 50px;
+	width: 180px;
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.mov_but:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+}

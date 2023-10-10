@@ -108,11 +108,72 @@ public class MemberDAO {
 		return result;
 	}
 
+	// 마이페이지 password Update
+	public int updatePwdMember(MemberVO mvo) {
+		int result = -1;
+		String sql = "update member set pwd=? where id=?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, mvo.getPwd());
+			pstmt.setString(2, mvo.getId());
+			result = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt);
+		}
+		return result;
+	}
+
+	// 마이페이지 개인정보 Update
+	public int updateMember(MemberVO mvo) {
+		int result = -1;
+		String sql = "update member set email=?, phone=? where id=?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, mvo.getEmail());
+			pstmt.setString(2, mvo.getPhone());
+			pstmt.setString(3, mvo.getId());
+			result = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt);
+		}
+		return result;
+	}
+
+	/* 마이페이지 회원탈퇴 */
+	public void deleteMember(String id) {
+		String sql = "delete from member where id=?";
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt);
+		}
+	}
+
 	/* 관리자 모드에서 사용되는 메소드 - 회원정보 리스트 */
 	public ArrayList<MemberVO> listMember(String member_name) {
 		ArrayList<MemberVO> memberList = new ArrayList<MemberVO>();
-		String sql = "select * from member where name like '%'||?||'%' " +
-				"order by indate desc";
+		String sql = "select * from member where name like '%'||?||'%' " + "order by indate desc";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -130,15 +191,15 @@ public class MemberDAO {
 			while (rs.next()) {
 				MemberVO memberVO = new MemberVO();
 				memberVO.setId(rs.getString("id"));
-		        memberVO.setPwd(rs.getString("pwd"));
-		        memberVO.setName(rs.getString("name"));
-		        memberVO.setEmail(rs.getString("email"));
-		        memberVO.setZipNum(rs.getString("zip_num"));
-		        memberVO.setAddress(rs.getString("address"));
-		        memberVO.setPhone(rs.getString("phone"));
-		        memberVO.setUseyn(rs.getString("useyn"));
-		        memberVO.setIndate(rs.getTimestamp("indate"));
-		        memberList.add(memberVO);
+				memberVO.setPwd(rs.getString("pwd"));
+				memberVO.setName(rs.getString("name"));
+				memberVO.setEmail(rs.getString("email"));
+				memberVO.setZipNum(rs.getString("zip_num"));
+				memberVO.setAddress(rs.getString("address"));
+				memberVO.setPhone(rs.getString("phone"));
+				memberVO.setUseyn(rs.getString("useyn"));
+				memberVO.setIndate(rs.getTimestamp("indate"));
+				memberList.add(memberVO);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

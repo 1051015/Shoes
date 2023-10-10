@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300&family=Noto+Sans+KR:wght@600&family=Roboto+Mono:wght@100&display=swap');
+@import url('spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+#wrap {
+	width: 70%;
+	margin-top: 30px;
+	margin-left: 15%;
+}
+
+h1 {
+	margin-bottom: 21px;
+}
+
+#orderList {
+	border-top: 2px solid #000;
+	border-bottom: 1px solid #b5b5b5;
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#orderList a {
+	text-decoration: none;
+	color: #333;
+}
+
+#orderList tr th,
+#orderList tr td {
+	text-align: center;
+	font-family: "Noto Sans KR", sans-serif;
+	color: #333;
+}
+
+#orderList tr th {
+	font-size: 15px;
+	border-bottom: 1px solid #d5d5d5;
+}
+
+#orderList tr td {
+	border-top: none;
+	border-bottom: 1px solid #d5d5d5;
+	padding: 0 33px 0;
+	font-size: 15px;
+	height: 70px;
+}

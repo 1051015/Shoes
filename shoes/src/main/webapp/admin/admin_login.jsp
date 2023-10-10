@@ -39,8 +39,12 @@
 			</div>
 
 			<!-- 관리자 로그인 버튼 -->
-			<button class="login__btn" type="submit" onclick="workerCheck()">관리자
+			<button class="login__btn" type="submit">관리자
 				로그인</button>
+			<!-- 홈으로 가기 버튼 -->
+			<button class="login__btn2" type="button"
+				onclick="location.href='ShoesServlet?command=index'">Wings
+				바로가기</button>
 			<h4 style="text-align: center; color: red;">${message}</h4>
 		</form>
 	</div>

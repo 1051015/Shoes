@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300&family=Noto+Sans+KR:wght@600&family=Roboto+Mono:wght@100&display=swap');
+@import url('spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+#wrap {
+	width: 60%;
+	margin-top: 30px;
+	margin-left: 20%;
+}
+
+h1 {
+	margin-bottom: 21px;
+}
+
+#date {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#orderList {
+	border-top: 2px solid #000;
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#orderList2 {
+	border-top: 2px solid #000;
+	border-bottom: 1px solid #ccc;
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+
+#orderList a {
+	text-decoration: none;
+	color: #333;
+}
+
+#orderList2 tr th {
+	width: 10%;
+}
+
+#orderList2 tr td {
+	line-height: 23px;
+	height: 40px;
+}
+
+
+
+#reply {
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+#orderList2 tr th {
+	width: 10%;
+	padding-right: 30px;
+}
+
+#orderList2 tr td {
+	width: 80%;
+}
+
+#orderList2 tr td textarea {
+	resize: none;
+	overflow: auto;
+	width: 100%;
+	height: 50px;
+}
+
+#notice_content_head {
+	margin: 16px 0 29px;
+	padding-bottom: 11px;
+	border-bottom: 2px solid #d3d3d3;
+}
+
+#notice_content_head h2 {
+	padding: 0 2px;
+	margin-bottom: 7px;
+}
+
+#write_date {
+	font-size: 15px;
+	color: #333;
+}
+
+#notice_content {
+	line-height: 22px;
+	font-size: 14px;
+	height: 275px;
+}
+
+#buttons {
+	margin-top: 50px;
+	padding-top: 0;
+	border-top: none;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#buttons input {
+	font-family: "Noto Sans KR", sans-serif;
+	font-size: 16px;
+}
+
+#submit {
+	width: 15%;
+	margin-left: 20px;
+	padding: 0 25px;
+}
+
+.submit {
+	background-color: #ccc;
+	border: 1px solid #ccc;
+	width: 100px;
+	height: 30px;
+	color: #333;
+	font-weight: 500;
+	line-height: 29px;
+}
+
+.btn {
+	background-color: #111;
+	padding: 0 25px;
+	border: 1px solid #111;
+	text-align: center;
+	font-weight: 500;
+	color: #fff;
+	height: 44px;
+	width: 200px;
+	height: 60px;
+	line-height: 58px;
+}

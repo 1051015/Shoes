@@ -1,30 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>회원관리 페이지</title>
-<link href="admin/css/admin.css" rel="stylesheet">
+<link href="admin/css/memberList_style.css" rel="stylesheet">
+<script type="text/javascript" src="admin/script/product.js"></script>
 </head>
 <body>
 	<%@ include file="/admin/admin_header.jsp"%>
 	<h1 class="title">회원리스트</h1>
 	<form method="post" name="afrm">
 		<div class="go_search">
-			<span>회원성명</span>&nbsp;<input type="text" name="key"> <input
-				type="button" value="검색" class="search_but" onclick="search()">
+			<span>회원성명</span> <input type="text" name="key"> <input
+				type="button" value="검색" class="search_but" onclick="go_search(0)">
 		</div>
-		<script type="text/javascript">
-			/*회원 검색 기능*/
-			function search() {
-				document.afrm.action = "ShoesServlet?command=admin_member_list";
-				document.afrm.submit();
-			}
-		</script>
-		<table id="orderList">
+
+		<table id="memberList">
 			<tr>
 				<th>아이디(탈퇴여부)</th>
 				<th>회원성명</th>

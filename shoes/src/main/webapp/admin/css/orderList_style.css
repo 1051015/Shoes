@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+.title {
+	text-align: center;
+	margin: 50px;
+}
+
+.go_search {
+	margin-left: 5%;
+	width: 90%;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.search_but {
+	width: 50px;
+	height: 23px;
+}
+
+table#orderList {
+	border-collapse: collapse; /* border 사이의 간격 없앰 */
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+	width: 90%;
+	margin: 0 auto;
+}
+
+table#orderList th {
+	background-color: #E4E4E4;
+}
+
+table#orderList th, td {
+	padding: 8px 5px;
+	text-align: center;
+}
+
+table#orderList td {
+	border-bottom: 1px dotted black;
+}
+
+.checkboxes {
+	padding: 5px;
+}
+
+.buttons {
+	margin: 50px;
+	text-align: center;
+}
+
+.check_but {
+	height: 50px;
+	width: 180px;
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.check_but:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+}

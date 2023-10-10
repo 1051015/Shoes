@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,162 +9,199 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WINGS</title>
-<link rel="stylesheet" href="user/css/index_style.css">
+<link rel="stylesheet" href="user/css/index_style.css?v=1">
 </head>
 <body>
 	<%@ include file="/header.jsp"%>
-	<div class="ad">
-		<!--헤더 바로 밑에 들어가는 광고베너부분-->
+	<div class="slideshow-container">
+	    <div class="slide">
+	      <img src="images/ad/ad1.jpg" alt="이미지 1">
+	    </div>
+	    
+	    <div class="slide">
+	      <img src="images/ad/ad2.jpg" alt="이미지 2">
+	    </div>
+	    
+	    <div class="slide">
+	      <img src="images/ad/ad3.jpg" alt="이미지 3">
+	    </div>
+	    
+	    <div class="slide">
+	      <img src="images/ad/ad6.jpg" alt="이미지 4">
+	    </div>
+	    <!-- 추가 이미지를 여기에 추가합니다. -->
 	</div>
-
-	<div class="bestitems">
-		<h1>Best Items</h1>
-		<div class="box">
-			<a href="#">
-				<div class="best1">
-					<div class="imgbox"></div>
-				</div>
-			</a> <a href="#">
-				<div class="best2">
-					<div class="imgbox"></div>
-				</div>
-			</a> <a href="#">
-				<div class="best3">
-					<div class="imgbox"></div>
-				</div>
-			</a> <a href="#">
-				<div class="best4">
-					<div class="imgbox"></div>
-				</div>
-			</a> <a href="#">
-				<div class="best5">
-					<div class="imgbox"></div>
-				</div>
-			</a> <a href="#">
-				<div class="best6">
-					<div class="imgbox"></div>
-				</div>
-			</a>
-		</div>
-
-		<div class="box2">
-			<a href="#">
-				<div class="best1">
-					<div class="imgbox"></div>
-				</div>
-			</a> <a href="#">
-				<div class="best2">
-					<div class="imgbox"></div>
-				</div>
-			</a> <a href="#">
-				<div class="best3">
-					<div class="imgbox"></div>
-				</div>
-			</a> <a href="#">
-				<div class="best4">
-					<div class="imgbox"></div>
-				</div>
-			</a> <a href="#">
-				<div class="best5">
-					<div class="imgbox"></div>
-				</div>
-			</a> <a href="#">
-				<div class="best6">
-					<div class="imgbox"></div>
-				</div>
-			</a>
-		</div>
-	</div>
-
-	<div class="mdpick">
-		<h1>MD'S PICK</h1>
-		<div class="box">
-			<a href="ShoesServlet?command=product_detail"><div class="md1"></div></a> <a href="#"><div
-					class="md2"></div></a> <a href="#"><div class="md3"></div></a> <a
-				href="#"><div class="md4"></div></a>
-		</div>
-
-		<div class="nar">
-			<div class="md1nar">
-				<span>나이키 신발1</span><a><br>편안함과 착용감을 겸비!!<br>나이키만의 스페셜
-					운동화</a>
-			</div>
-
-			<div class="md2nar">
-				<span>나이키 신발2</span><a><br>편안함과 착용감을 겸비!!<br>나이키만의 스페셜
-					운동화</a>
-			</div>
-
-			<div class="md3nar">
-				<span>아디다스 신발1</span><a><br>편안함과 착용감을 겸비!!<br>아디다스의
-					스페셜 운동화</a>
-			</div>
-
-			<div class="md4nar">
-				<span>아디다스 신발2</span><a><br>편안함과 착용감을 겸비!!<br>아디다스의
-					스페셜 운동화</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="newitems">
-		<h1>New Items</h1>
-		<div class="box">
-			<a href="#">
-				<div class="new1"></div>
-			</a> <a href="#">
-				<div class="new2"></div>
-			</a> <a href="#">
-				<div class="new3"></div>
-			</a> <a href="#">
-				<div class="new4"></div>
-			</a> <a href="#">
-				<div class="new5"></div>
-			</a> <a href="#">
-				<div class="new6"></div>
-			</a>
-		</div>
-	</div>
-
-	<div class="topbrand">
-		<h1>Top Brand</h1>
-		<div class="box">
-			<a href="#"><div class="brand1"></div></a> <a href="#"><div
-					class="brand2"></div></a> <a href="#"><div class="brand3"></div></a>
-		</div>
-
-		<div class="box2">
-			<a href="#"><div class="brand1"></div></a> <a href="#"><div
-					class="brand2"></div></a> <a href="#"><div class="brand3"></div></a>
-		</div>
-	</div>
-
-	<div class="hotsale">
-		<h1>Hot Sale</h1>
-		<div class="box">
-			<a href="#"><div class="sale1"></div></a> <a href="#"><div
-					class="sale2"></div></a> <a href="#"><div class="sale3"></div></a> <a
-				href="#"><div class="sale4"></div></a> <a href="#"><div
-					class="sale5"></div></a> <a href="#"><div class="sale6"></div></a>
-		</div>
-	</div>
+	
+	<script src="user/script/adscript.js"></script>
 
 	<div class="ranking">
-		<h1>RANKING</h1>
+		<h1>BEST ITEMS</h1>
 		<div class="box">
-			<a href="#"><div class="rank1"></div></a> <a href="#"><div
-					class="rank2"></div></a> <a href="#"><div class="rank3"></div></a> <a
-				href="#"><div class="rank4"></div></a> <a href="#"><div
-					class="rank5"></div></a>
+			<ul>
+				<c:forEach items="${productAll}" var="productVO" begin="60" end="64"
+					step="1">
+					<li class="product"><a
+						href="ShoesServlet?command=product_detail&shoescode=${productVO.shoescode}"><img
+							src="product_images/${productVO.mainimg}"
+							style="width: 280px; height: 280px;"></a>
+						<div class="product_info">
+							<h4>${productVO.brand}</h4>
+							<p>${productVO.pname}</p>
+							<br> <span class="price"> <fmt:formatNumber
+									value="${productVO.price}" pattern="###,###" />원
+							</span>
+						</div></li>
+				</c:forEach>
+				
+			</ul>
+		</div>
+		<div class="box">
+			<ul>
+				<c:forEach items="${productAll}" var="productVO" begin="37" end="41"
+					step="1">
+					<li class="product"><a
+						href="ShoesServlet?command=product_detail&shoescode=${productVO.shoescode}"><img
+							src="product_images/${productVO.mainimg}"
+							style="width: 280px; height: 280px;"></a>
+						<div class="product_info">
+							<h4>${productVO.brand}</h4>
+							<p>${productVO.pname}</p>
+							<br> <span class="price"> <fmt:formatNumber
+									value="${productVO.price}" pattern="###,###" />원
+							</span>
+						</div></li>
+				</c:forEach>
+				
+			</ul>
 		</div>
 
-		<div class="box2">
-			<a href="#"><div class="rank1"></div></a> <a href="#"><div
-					class="rank2"></div></a> <a href="#"><div class="rank3"></div></a> <a
-				href="#"><div class="rank4"></div></a> <a href="#"><div
-					class="rank5"></div></a>
+		<h1>MD'S PICK</h1>
+			<div class="box">
+				<ul>
+					<c:forEach items="${productAll}" var="productVO" begin="28" end="32"
+						step="1">
+						<li class="product"><a
+							href="ShoesServlet?command=product_detail&shoescode=${productVO.shoescode}"><img
+								src="product_images/${productVO.mainimg}"
+								style="width: 280px; height: 280px;"></a>
+							<div class="product_info">
+								<h4>${productVO.brand}</h4>
+								<p>${productVO.pname}</p>
+								<br> <span class="price"> <fmt:formatNumber
+										value="${productVO.price}" pattern="###,###" />원
+								</span>
+							</div></li>
+					</c:forEach>
+				</ul>
+			</div>
+
+	<h1>NEW ITEMS</h1>
+		<div class="box">
+			<ul>
+				<c:forEach items="${productAll}" var="productVO" begin="41" end="45"
+					step="1">
+					<li class="product"><a
+						href="ShoesServlet?command=product_detail&shoescode=${productVO.shoescode}"><img
+							src="product_images/${productVO.mainimg}"
+							style="width: 280px; height: 280px;"></a>
+						<div class="product_info">
+							<h4>${productVO.brand}</h4>
+							<p>${productVO.pname}</p>
+							<br> <span class="price"> <fmt:formatNumber
+									value="${productVO.price}" pattern="###,###" />원
+							</span>
+						</div></li>
+				</c:forEach>
+			</ul>
+		</div>
+	
+	<h1>TOP BRAND</h1>
+	<div class="brandbox">
+		<ul>
+			<li class="brandproduct">
+			<a href="ShoesServlet?command=brand_form"><img src="images/product/nike2.png" style="width: 480px; height: 480px;"></a>
+			</li>
+			<li class="brandproduct">
+			<a href="ShoesServlet?command=brand_form"><img src="images/product/addidas.png" style="width: 480px; height: 480px;"></a>
+			</li>
+			<li class="brandproduct">
+			<a href="ShoesServlet?command=brand_form"><img src="images/product/asics.png" style="width: 480px; height: 480px;"></a>
+			</li>
+		</ul>
+	</div>
+	<div class="brandbox">
+		<ul>
+			<li class="brandproduct">
+			<a href="ShoesServlet?command=brand_form"><img src="images/product/cloudzero.png" style="width: 480px; height: 480px;"></a>
+			</li>
+			<li class="brandproduct">
+			<a href="ShoesServlet?command=brand_form"><img src="images/product/macmoc.png" style="width: 480px; height: 480px;"></a>
+			</li>
+			<li class="brandproduct">
+			<a href="ShoesServlet?command=brand_form"><img src="images/product/p-31.png" style="width: 480px; height: 480px;"></a>
+			</li>
+		</ul>
+	</div>
+
+	<h1>HOT SALE</h1>
+		<div class="box">
+			<ul>
+				<c:forEach items="${productAll}" var="productVO" begin="46" end="50"
+					step="1">
+					<li class="product"><a
+						href="ShoesServlet?command=product_detail&shoescode=${productVO.shoescode}"><img
+							src="product_images/${productVO.mainimg}"
+							style="width: 280px; height: 280px;"></a>
+						<div class="product_info">
+							<h4>${productVO.brand}</h4>
+							<p>${productVO.pname}</p>
+							<br> <span class="price"> <fmt:formatNumber
+									value="${productVO.price}" pattern="###,###" />원
+							</span>
+						</div></li>
+				</c:forEach>
+			</ul>
+		</div>
+
+	<h1>RANKING</h1>
+		<div class="box">
+			<ul>
+				<c:forEach items="${productAll}" var="productVO" begin="0" end="4"
+					step="1">
+					<li class="product"><a
+						href="ShoesServlet?command=product_detail&shoescode=${productVO.shoescode}"><img
+							src="product_images/${productVO.mainimg}"
+							style="width: 280px; height: 280px;"></a>
+						<div class="product_info">
+							<h4>${productVO.brand}</h4>
+							<p>${productVO.pname}</p>
+							<br> <span class="price"> <fmt:formatNumber
+									value="${productVO.price}" pattern="###,###" />원
+							</span>
+						</div></li>
+				</c:forEach>
+			</ul>
+		</div>
+		<div class="box">
+			<ul>
+				<c:forEach items="${productAll}" var="productVO" begin="5" end="9"
+					step="1">
+					<li class="product"><a
+						href="ShoesServlet?command=product_detail&shoescode=${productVO.shoescode}"><img
+							src="product_images/${productVO.mainimg}"
+							style="width: 280px; height: 280px;"></a>
+						<div class="product_info">
+							<h4>${productVO.brand}</h4>
+							<p>${productVO.pname}</p>
+							<br> <span class="price"> <fmt:formatNumber
+									value="${productVO.price}" pattern="###,###" />원
+							</span>
+						</div></li>
+				</c:forEach>
+			</ul>
 		</div>
 	</div>
+		
 	<%@ include file="/footer.jsp"%>
 </body>
 </html>

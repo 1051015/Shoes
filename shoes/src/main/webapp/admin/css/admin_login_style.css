@@ -129,3 +129,25 @@ form .login__btn {
 form .login__btn:hover {
 	background: #424242;
 }
+
+form .login__btn2 {
+	background: #666;
+	color: white;
+	display: block;
+	width: 92.5%;
+	max-width: 680px;
+	height: 50px;
+	border-radius: 8px;
+	margin: 0 auto;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+	font-family: "Montserrat", sans-serif;
+	box-shadow: 0 15px 30px rgba(15, 19, 42, 0);
+	transition: 0.2s linear;
+	margin-top: 10px;
+}
+
+form .login__btn2:hover {
+	background: #424242;
+}

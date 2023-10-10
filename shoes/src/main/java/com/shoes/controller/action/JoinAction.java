@@ -15,7 +15,7 @@ public class JoinAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "user/member/login.jsp";
+		String url = "index.jsp";
 
 		HttpSession session = request.getSession();
 		MemberVO memberVO = new MemberVO();

@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+.title {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.cart {
+	width: 90%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.cart ul {
+	margin-top: 40px; background-color : whitesmoke;
+	padding: 30px;
+	margin-bottom: 50px;
+	border: whitesmoke solid 1px;
+	border-radius: 5px;
+	font-size: 13px;
+	background-color: whitesmoke; padding : 30px; margin-bottom : 50px;
+	border : whitesmoke solid 1px; border-radius : 5px; font-size : 13px;
+	font-weight: bold;
+}
+
+#cartList {
+	border-collapse: collapse; /* border 사이의 간격 없앰 */
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+	width: 100%; /* 전체 테이블 길이 설정 */
+	margin-bottom: 20px;
+}
+
+#cartList .category {
+	background-color: #E4E4E4;
+	border-bottom: 1px solid #333;
+	padding: 8px 5px;
+}
+
+#cartList .data {
+	padding: 8px 5px;
+	text-align: center;
+	border-bottom: 1px dotted #333;
+}
+
+.total_price {
+	font-size: 1.3em;
+	font-weight: bold;
+	float: right;
+}
+
+#buttons {
+	float: left;
+}
+
+#buttons .delete {
+	width: 80px;
+	height: 25px;
+	color: black;
+	background: #ccc;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+
+#buttons .continue {
+	width: 100px;
+	height: 25px;
+	color: black;
+	background: #ccc;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+
+#buttons .order {
+	width: 80px;
+	height: 25px;
+	color: black;
+	background: #ccc;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
