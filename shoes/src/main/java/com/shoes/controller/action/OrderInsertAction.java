@@ -32,6 +32,7 @@ public class OrderInsertAction implements Action {
 			if (type.equals("now")) {
 				int quantity = Integer.parseInt(request.getParameter("quantity"));
 				String shoescode = request.getParameter("shoescode");
+
 				ProductDAO productDAO = ProductDAO.getInstance();
 				ArrayList<ProductVO> productList = new ArrayList<ProductVO>();
 				productList.add(productDAO.getProduct(shoescode));
@@ -40,7 +41,7 @@ public class OrderInsertAction implements Action {
 
 				int maxOseq = orderDAO.nowinsertOrder(productList, loginUser.getId(), quantity);
 				url = "ShoesServlet?command=order_list&oseq=" + maxOseq;
-				
+
 			} else if (type.equals("cart")) {
 				CartDAO cartDAO = CartDAO.getInstance();
 				ArrayList<CartVO> cartList = cartDAO.listCart(loginUser.getId());

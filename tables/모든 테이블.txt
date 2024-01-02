@@ -281,7 +281,7 @@ insert into orders(oseq, id) values(orders_seq.nextval, 'one');
 insert into orders(oseq, id) values(orders_seq.nextval, 'one');
 
 insert into order_detail(odseq, oseq, shoescode, quantity) values(order_detail_seq.nextval, 1, 'nike01_brand', 1);
-insert into order_detail(odseq, oseq, shoescode, quantity) values(order_detail_seq.nextval, 2, 'nike02_brand', 1);
+insert into order_detail(odseq, oseq, shoescode, quantity) values(order_detail_seq.nextval, 1, 'nike02_brand', 1);
 
 select * from orders;
 select * from order_detail;

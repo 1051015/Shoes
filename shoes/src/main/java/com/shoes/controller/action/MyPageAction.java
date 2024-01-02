@@ -10,11 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.shoes.dao.OrderDAO;
-import com.shoes.dao.ProductDAO;
 import com.shoes.dao.ZzimDAO;
 import com.shoes.dto.MemberVO;
 import com.shoes.dto.OrderVO;
-import com.shoes.dto.ProductVO;
 import com.shoes.dto.ZzimVO;
 
 public class MyPageAction implements Action {
@@ -30,7 +28,6 @@ public class MyPageAction implements Action {
 		if (loginUser == null) {
 			url = "ShoesServlet?command=login_form";
 		} else {
-			
 			ZzimDAO zdao = ZzimDAO.getInstace();
 			ArrayList<ZzimVO> zzimList = zdao.listZzim(loginUser.getId());
 			request.setAttribute("zzim", zzimList);

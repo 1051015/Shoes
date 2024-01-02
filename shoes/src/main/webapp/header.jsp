@@ -57,7 +57,7 @@
 					<c:otherwise>
 						<li class="user_login">
 							${sessionScope.loginUser.name}(${sessionScope.loginUser.id})님</li>
-						<li style="margin-top:1px;"><a
+						<li style="margin-top: 1px;"><a
 							href="ShoesServlet?command=logout"><img
 								src="images/logout.png"></a></li>
 						<li><a href="ShoesServlet?command=cart_list"><img
@@ -83,7 +83,14 @@
 
 			<div class="sub">
 				<ul>
-					<li><a href="#" onclick="message(2)">Q/A</a></li>
+					<c:choose>
+						<c:when test="${empty sessionScope.loginUser}">
+							<li><a href="#" onclick="message(2)">Q&A</a></li>
+						</c:when>
+						<c:otherwise>
+							<li><a href="ShoesServlet?command=qna_list">Q/A</a></li>
+						</c:otherwise>
+					</c:choose>
 					<li><a href="ShoesServlet?command=models_form">MODELS</a></li>
 					<li><a href="ShoesServlet?command=onlywings_form">ONLY
 							WINGS</a></li>

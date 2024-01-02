@@ -32,11 +32,11 @@
 				<tr>
 					<td><c:choose>
 							<c:when test='${orderVO.result=="1"}'>
-								<span style="font-weight: bold; color: blue">${orderVO.oseq}</span>
-        (<input type="checkbox" name="result" value="${orderVO.oseq}" class="checkboxes"> 미처리)
+								<span style="font-weight: bold; color: blue">${orderVO.odseq}</span>
+        (<input type="checkbox" name="result" value="${orderVO.odseq}" class="checkboxes"> 미처리)
         </c:when>
 							<c:otherwise>
-								<span style="font-weight: bold; color: red">${orderVO.oseq}</span>
+								<span style="font-weight: bold; color: red">${orderVO.odseq}</span>
           (<input type="checkbox" checked="checked" disabled="disabled" class="checkboxes">처리완료)
         </c:otherwise>
 						</c:choose></td>

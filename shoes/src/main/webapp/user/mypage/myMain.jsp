@@ -22,7 +22,7 @@
 						<th>주문번호</th>
 						<th>상품명</th>
 						<th>결제금액</th>
-						<th>주문상세</th>
+						<th>주문처리</th>
 					</tr>
 					<c:forEach items="${orderList}" var="orderVO">
 						<tr>
@@ -31,12 +31,7 @@
 							<td>${orderVO.pname}</td>
 							<td><fmt:formatNumber value="${orderVO.price}"
 									pattern="###,###" />원</td>
-							<td><c:choose>
-									<c:when test='${orderVO.result=="1"}'> 진행중 </c:when>
-									<c:otherwise>
-										<span> 처리완료 </span>
-									</c:otherwise>
-								</c:choose></td>
+							<td>진행중</td>
 						</tr>
 					</c:forEach>
 				</table>

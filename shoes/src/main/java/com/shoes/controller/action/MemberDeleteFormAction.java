@@ -23,6 +23,10 @@ public class MemberDeleteFormAction implements Action {
 		MemberVO loginUser = (MemberVO)session.getAttribute("loginUser");
 		request.setAttribute("mvo", loginUser);
 		
+		if(loginUser == null) {
+			url = "ShoesServlet?command=login_form";
+		}
+		
 		ZzimDAO zdao = ZzimDAO.getInstace();
 		ArrayList<ZzimVO> zzimList = zdao.listZzim(loginUser.getId());
 		request.setAttribute("zzim", zzimList);
@@ -45,11 +49,6 @@ public class MemberDeleteFormAction implements Action {
 			orderList.add(orderVO);
 		}
 		request.setAttribute("orderList", orderList);
-		
-		if(loginUser == null) {
-			url = "ShoesServlet?command=login_form";
-		}
-		
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 }
